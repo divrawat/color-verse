@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
-Sitemap: /sitemap.xml
+
+User-agent: *
+Allow: /
+
+Sitemap: https://colorverse.online/sitemap.xml
