@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Palette, Layers, ArrowRight, Zap, Sparkles } from 'lucide-react';
+import { Palette, Layers, ArrowRight, Zap, Sparkles, Github, Linkedin, ExternalLink } from 'lucide-react';
 import SEO from '@/components/SEO';
 import SchemaOrg from '@/components/SchemaOrg';
 
@@ -160,6 +160,50 @@ export default function Home() {
             gradient="from-indigo-500/10 to-blue-500/10"
           />
         </section>
+        <p>00000000000000000000000000000000000000</p>
+
+        {/* Author Section */}
+        <section className="max-w-4xl mx-auto py-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-white p-8 md:p-12 rounded-[3rem] shadow-xl border border-gray-50"
+          >
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="w-24 h-24 bg-gradient-to-tr from-pink-500 to-violet-600 rounded-full flex items-center justify-center text-white text-3xl font-bold shadow-2xl flex-shrink-0"
+              >
+                DR
+              </motion.div>
+
+              <div className="flex-1 text-center md:text-left space-y-4">
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-2">
+                    Created by <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-600 to-violet-600">Divyanshu Rawat</span>
+                  </h2>
+                  <p className="text-gray-600 leading-relaxed">
+                    Full Stack Developer from India, passionate about building modern web applications and design tools.
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+                  <SocialLink
+                    href="https://github.com/divrawat"
+                    icon={<Github size={18} />}
+                    label="GitHub"
+                  />
+                  <SocialLink
+                    href="https://www.linkedin.com/in/divrawat2001/"
+                    icon={<Linkedin size={18} />}
+                    label="LinkedIn"
+                  />
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </section>
       </div>
     </>
   );
@@ -184,5 +228,20 @@ function ToolCard({ href, title, description, icon, gradient }) {
         </div>
       </motion.div>
     </Link>
+  );
+}
+
+function SocialLink({ href, icon, label }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 px-4 py-2 bg-gray-50 hover:bg-gray-900 hover:text-white border border-gray-200 rounded-full text-sm font-bold transition-all group"
+    >
+      {icon}
+      <span>{label}</span>
+      <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+    </a>
   );
 }
