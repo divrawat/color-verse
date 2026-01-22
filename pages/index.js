@@ -160,7 +160,6 @@ export default function Home() {
             gradient="from-indigo-500/10 to-blue-500/10"
           />
         </section>
-        <p>00000000000000000000000000000000000000</p>
 
         {/* Author Section */}
         <section className="max-w-4xl mx-auto py-12">
