@@ -18,27 +18,27 @@ export default function Home() {
           "@graph": [
             {
               "@type": "WebSite",
-              "@id": "https://colorverse.com/#website",
-              "url": "https://colorverse.com",
+              "@id": "https://colorverse.online/#website",
+              "url": "https://colorverse.online",
               "name": "ColorVerse",
               "description": "Professional CSS tools for developers: Gradient Generator, Color Shades, and Backgrounds.",
               "publisher": {
-                "@id": "https://colorverse.com/#organization"
+                "@id": "https://colorverse.online/#organization"
               },
               "potentialAction": [
                 {
                   "@type": "SearchAction",
-                  "target": "https://colorverse.com/color-shades?q={search_term_string}",
+                  "target": "https://colorverse.online/color-shades?q={search_term_string}",
                   "query-input": "required name=search_term_string"
                 }
               ]
             },
             {
               "@type": "Organization",
-              "@id": "https://colorverse.com/#organization",
+              "@id": "https://colorverse.online/#organization",
               "name": "ColorVerse",
-              "url": "https://colorverse.com",
-              "logo": "https://colorverse.com/logo.png",
+              "url": "https://colorverse.online",
+              "logo": "https://colorverse.online/logo.png",
               "sameAs": [
                 "https://github.com/divrawat",
                 "https://www.linkedin.com/in/divrawat2001/"

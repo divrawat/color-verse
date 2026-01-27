@@ -4,7 +4,7 @@ export default function SEO({ title, description, ogImage, ogType = 'website', c
     const siteName = 'ColorVerse';
     const fullTitle = title ? `${title} | ${siteName}` : siteName;
     const siteDescription = description || 'Professional CSS tools for developers: Gradient Generator, Color Shades, and curated Gradient Backgrounds.';
-    const domain = 'https://colorverse.com'; // Replace with actual domain when deployed
+    const domain = 'https://colorverse.online'; // Replace with actual domain when deployed
 
     return (
         <Head>

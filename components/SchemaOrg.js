@@ -9,7 +9,7 @@ export default function SchemaOrg({ type, data = {} }) {
             '@type': type || 'WebApplication',
             'name': 'ColorVerse',
             'description': 'A suite of professional CSS tools including gradient generators and color shade explorers.',
-            'url': 'https://colorverse.com',
+            'url': 'https://colorverse.online',
             'author': {
                 '@type': 'Person',
                 'name': 'Divyanshu Rawat',

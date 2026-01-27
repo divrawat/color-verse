@@ -68,7 +68,7 @@ export default function ColorShadesLanding() {
                     "itemListElement": COLOR_GROUPS.map((g, i) => ({
                         "@type": "ListItem",
                         "position": i + 1,
-                        "url": `https://colorverse.com/shades-of-${g.slug}`,
+                        "url": `https://colorverse.online/shades-of-${g.slug}`,
                         "name": `Shades of ${g.name}`
                     }))
                 }}
