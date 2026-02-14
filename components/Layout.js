@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
-import { Palette, Layers, Home, Sparkles, Github, Linkedin } from 'lucide-react';
+import { Palette, Layers, Home, Sparkles, Github, Linkedin, BookOpen } from 'lucide-react';
 import clsx from 'clsx';
 
 export default function Layout({ children }) {
@@ -22,6 +22,7 @@ export default function Layout({ children }) {
 
           <div className="hidden md:flex gap-1 bg-gray-100/50 p-1 rounded-full border border-gray-200/50">
             <NavLink href="/" icon={<Home size={18} />} active={router.pathname === '/'}>Home</NavLink>
+            <NavLink href="/blog" icon={<BookOpen size={18} />} active={router.pathname.startsWith('/blog')}>Blog</NavLink>
             <NavLink href="/gradient-generator" icon={<Palette size={18} />} active={router.pathname === '/gradient-generator'}>Gradient Gen</NavLink>
             <NavLink href="/gradient-backgrounds" icon={<Sparkles size={18} />} active={router.pathname === '/gradient-backgrounds'}>Backgrounds</NavLink>
             <NavLink href="/color-shades" icon={<Layers size={18} />} active={router.pathname === '/color-shades'}>Color Shades</NavLink>
