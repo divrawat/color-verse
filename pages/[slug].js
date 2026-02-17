@@ -5,6 +5,7 @@ import { ArrowLeft, Copy, Check, Info } from 'lucide-react';
 import Link from 'next/link';
 import SEO from '@/components/SEO';
 import SchemaOrg from '@/components/SchemaOrg';
+export const runtime = 'experimental-edge';
 
 const COLOR_GROUPS = {
     blue: { hex: '#3b82f6', name: 'Blue', description: 'Blue represents stability, intelligence, and confidence. It is a popular choice for corporate and technology brand identities.' },
