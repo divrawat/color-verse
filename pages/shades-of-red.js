@@ -1,4 +1,3 @@
-import chroma from 'chroma-js';
 import StaticColorPage from '@/components/StaticColorPage';
 
 const colorData = {
@@ -7,30 +6,59 @@ const colorData = {
     description: 'Red is associated with energy, passion, and action. It is a high-visibility color that can evoke strong emotions.'
 };
 
-export async function getStaticProps() {
-    const tints = chroma
-        .scale(['#ffffff', colorData.hex])
-        .mode('lch')
-        .colors(22)
-        .slice(1, 21)
-        .reverse();
+const tints = [
+    "#f2504c",
+    "#f45a54",
+    "#f5635c",
+    "#f76c64",
+    "#f8756c",
+    "#f97e74",
+    "#fa867d",
+    "#fb8f85",
+    "#fc978e",
+    "#fca096",
+    "#fda89f",
+    "#feb1a7",
+    "#feb9b0",
+    "#ffc2b8",
+    "#ffcac1",
+    "#ffd3ca",
+    "#ffdbd2",
+    "#ffe4db",
+    "#ffece4",
+    "#fff5ed"
+];
 
-    const shades = chroma
-        .scale([colorData.hex, '#000000'])
-        .mode('lch')
-        .colors(22)
-        .slice(1, 21);
+const shades = [
+    "#e73c3e",
+    "#de3338",
+    "#d62932",
+    "#ce1d2c",
+    "#c60726",
+    "#be001f",
+    "#b60015",
+    "#af0000",
+    "#a70000",
+    "#a00000",
+    "#990000",
+    "#920000",
+    "#8b0000",
+    "#840000",
+    "#7e0000",
+    "#770000",
+    "#710000",
+    "#6a0000",
+    "#640000",
+    "#5e0000"
+];
 
-    return {
-        props: {
-            colorData,
-            tints,
-            shades,
-            slug: 'shades-of-red',
-        },
-    };
-}
-
-export default function RedShades(props) {
-    return <StaticColorPage {...props} />;
+export default function RedShades() {
+    return (
+        <StaticColorPage
+            colorData={colorData}
+            tints={tints}
+            shades={shades}
+            slug="shades-of-red"
+        />
+    );
 }

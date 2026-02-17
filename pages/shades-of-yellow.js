@@ -1,4 +1,3 @@
-import chroma from 'chroma-js';
 import StaticColorPage from '@/components/StaticColorPage';
 
 const colorData = {
@@ -7,30 +6,59 @@ const colorData = {
     description: 'Yellow is the color of sunshine, hope, and happiness. It is often used to grab attention and evoke positivity.'
 };
 
-export async function getStaticProps() {
-    const tints = chroma
-        .scale(['#ffffff', colorData.hex])
-        .mode('lch')
-        .colors(22)
-        .slice(1, 21)
-        .reverse();
+const tints = [
+    "#f7a222",
+    "#f9a732",
+    "#faab40",
+    "#fbb04d",
+    "#fcb55a",
+    "#fdba67",
+    "#fdbf73",
+    "#fec380",
+    "#fec88c",
+    "#ffcd99",
+    "#ffd1a5",
+    "#ffd6b1",
+    "#ffdabd",
+    "#ffdfc9",
+    "#ffe3d5",
+    "#ffe8e1",
+    "#ffecec",
+    "#fff1f8",
+    "#fff5ff",
+    "#fffaff"
+];
 
-    const shades = chroma
-        .scale([colorData.hex, '#000000'])
-        .mode('lch')
-        .colors(22)
-        .slice(1, 21);
+const shades = [
+    "#ea9500",
+    "#df8c00",
+    "#d48300",
+    "#c97a00",
+    "#bf7100",
+    "#b46800",
+    "#aa5f00",
+    "#a05600",
+    "#964d00",
+    "#8c4400",
+    "#823b00",
+    "#793200",
+    "#6f2900",
+    "#662000",
+    "#5d1700",
+    "#540e00",
+    "#4c0500",
+    "#440000",
+    "#3d0000",
+    "#360000"
+];
 
-    return {
-        props: {
-            colorData,
-            tints,
-            shades,
-            slug: 'shades-of-yellow',
-        },
-    };
-}
-
-export default function YellowShades(props) {
-    return <StaticColorPage {...props} />;
+export default function YellowShades() {
+    return (
+        <StaticColorPage
+            colorData={colorData}
+            tints={tints}
+            shades={shades}
+            slug="shades-of-yellow"
+        />
+    );
 }
