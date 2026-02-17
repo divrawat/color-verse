@@ -5,54 +5,8 @@ import { ArrowLeft, Copy, Check, Info } from 'lucide-react';
 import Link from 'next/link';
 import SEO from '@/components/SEO';
 import SchemaOrg from '@/components/SchemaOrg';
-export const runtime = 'edge';
 
-const COLOR_GROUPS = {
-    blue: { hex: '#3b82f6', name: 'Blue', description: 'Blue represents stability, intelligence, and confidence. It is a popular choice for corporate and technology brand identities.' },
-    green: { hex: '#10b981', name: 'Green', description: 'Green symbolizes growth, harmony, and freshness. In design, it is often used to represent nature, wealth, and stability.' },
-    red: { hex: '#ef4444', name: 'Red', description: 'Red is associated with energy, passion, and action. It is a high-visibility color that can evoke strong emotions.' },
-    yellow: { hex: '#f59e0b', name: 'Yellow', description: 'Yellow is the color of sunshine, hope, and happiness. It is often used to grab attention and evoke positivity.' },
-    purple: { hex: '#8b5cf6', name: 'Purple', description: 'Purple combines the stability of blue and the energy of red. It is often associated with royalty, luxury, and ambition.' },
-    pink: { hex: '#ec4899', name: 'Pink', description: 'Pink represents playful energy and soft elegance. It is commonly used for romantic, youthful, and vibrant designs.' },
-    indigo: { hex: '#6366f1', name: 'Indigo', description: 'Indigo is a deep, sophisticated color that represents intuition and perception. It feels modern and premium.' },
-    teal: { hex: '#14b8a6', name: 'Teal', description: 'Teal is a revitalizing and rejuvenating color that represents communication and clarity of mind.' },
-    orange: { hex: '#f97316', name: 'Orange', description: 'Orange combines the energy of red and the happiness of yellow. It represents creativity, success, and encouragement.' },
-};
-
-export async function getServerSideProps({ params }) {
-    const { slug } = params;
-
-    const colorKey = slug.replace('shades-of-', '');
-    const colorData = COLOR_GROUPS[colorKey];
-
-    if (!colorData) {
-        return { notFound: true };
-    }
-
-    const tints = chroma
-        .scale(['#ffffff', colorData.hex])
-        .mode('lch')
-        .colors(22)
-        .slice(1, 21)
-        .reverse();
-
-    const shades = chroma
-        .scale([colorData.hex, '#000000'])
-        .mode('lch')
-        .colors(22)
-        .slice(1, 21);
-
-    return {
-        props: {
-            colorData,
-            tints,
-            shades,
-            slug,
-        },
-    };
-}
-
-export default function ShadesPage({ colorData, tints, shades, slug }) {
+export default function StaticColorPage({ colorData, tints, shades, slug }) {
     const [copiedColor, setCopiedColor] = useState(null);
 
     const handleCopy = (color) => {
@@ -86,8 +40,6 @@ export default function ShadesPage({ colorData, tints, shades, slug }) {
             />
 
             <div className="space-y-12">
-
-                {/* Back Navigation */}
                 <nav className="flex items-center gap-4">
                     <Link
                         href="/color-shades"
@@ -97,7 +49,6 @@ export default function ShadesPage({ colorData, tints, shades, slug }) {
                     </Link>
                 </nav>
 
-                {/* Header */}
                 <header className="flex flex-col md:flex-row gap-12 items-center md:items-start border-b border-gray-100 pb-16">
                     <motion.div
                         initial={{ scale: 0.8, opacity: 0 }}
@@ -121,7 +72,6 @@ export default function ShadesPage({ colorData, tints, shades, slug }) {
                     </div>
                 </header>
 
-                {/* Tints Section */}
                 <section className="space-y-8 pt-12">
                     <div className="flex items-center gap-3">
                         <div className="w-1.5 h-8 bg-gray-900 rounded-full" />
@@ -132,7 +82,7 @@ export default function ShadesPage({ colorData, tints, shades, slug }) {
 
                     <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-10 gap-4">
                         {tints.map((color, index) => (
-                            <BigColorCard
+                            <ColorCard
                                 key={`tint-${index}`}
                                 color={color}
                                 onClick={() => handleCopy(color)}
@@ -142,7 +92,6 @@ export default function ShadesPage({ colorData, tints, shades, slug }) {
                     </div>
                 </section>
 
-                {/* Shades Section */}
                 <section className="space-y-8 pt-16">
                     <div className="flex items-center gap-3">
                         <div className="w-1.5 h-8 bg-gray-900 rounded-full" />
@@ -153,7 +102,7 @@ export default function ShadesPage({ colorData, tints, shades, slug }) {
 
                     <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-10 gap-4">
                         {shades.map((color, index) => (
-                            <BigColorCard
+                            <ColorCard
                                 key={`shade-${index}`}
                                 color={color}
                                 onClick={() => handleCopy(color)}
@@ -163,7 +112,6 @@ export default function ShadesPage({ colorData, tints, shades, slug }) {
                     </div>
                 </section>
 
-                {/* Info Box */}
                 <div className="bg-blue-50/50 rounded-[2.5rem] p-10 flex flex-col md:flex-row items-center gap-8 border border-blue-100 mt-20">
                     <div className="w-16 h-16 bg-blue-500 text-white rounded-2xl flex items-center justify-center shrink-0">
                         <Info size={32} />
@@ -179,13 +127,12 @@ export default function ShadesPage({ colorData, tints, shades, slug }) {
                         </p>
                     </div>
                 </div>
-
             </div>
         </>
     );
 }
 
-function BigColorCard({ color, onClick, copied }) {
+function ColorCard({ color, onClick, copied }) {
     const isLight = chroma(color).luminance() > 0.5;
 
     return (
