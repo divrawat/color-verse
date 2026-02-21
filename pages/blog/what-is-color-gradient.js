@@ -64,7 +64,10 @@ export default function ColorGradientGuide() {
                         transition={{ delay: 0.1 }}
                         className="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight"
                     >
-                        What Is a Color Gradient?
+                        What Is a Color Gradient? <br />
+                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-600 to-purple-600">
+                            A Beginner's Guide
+                        </span>
                     </motion.h1>
 
                     <motion.p
@@ -109,119 +112,153 @@ export default function ColorGradientGuide() {
                 </motion.div>
 
                 {/* Article Content */}
-                <article className="prose prose-lg max-w-none space-y-12">
+                <article className="prose prose-xl max-w-none space-y-32">
 
-                    {/* Introduction */}
-                    <section className="space-y-6">
-                        <h2 className="text-4xl font-bold text-gray-900 flex items-center gap-3">
-                            <div className="w-1.5 h-10 bg-gradient-to-b from-pink-500 to-purple-500 rounded-full" />
-                            Introduction to Color Gradients
+                    {/* Section 01: Introduction & Neural Geometry (NEW) */}
+                    <section className="space-y-12">
+                        <div className="flex items-center gap-4 text-pink-600 font-black uppercase tracking-[0.2em] text-sm">
+                            <Activity size={20} />
+                            <span>Section 01 // Differentiable Geometry</span>
+                        </div>
+                        <h2 className="text-6xl font-black text-gray-900 leading-none">
+                            The Topology of <br />
+                            <span className="text-gray-400">Color Surfaces</span>
                         </h2>
-
-                        <div className="text-gray-700 leading-relaxed space-y-4 text-lg">
+                        <div className="text-xl text-gray-700 leading-relaxed space-y-8 text-lg">
                             <p>
-                                A <strong>color gradient</strong> (also known as a color ramp or color progression) is a gradual transition between two or more colors. Unlike solid colors, gradients create smooth, flowing transitions that add depth, dimension, and visual interest to designs.
+                                A color gradient is not just an aesthetic trend; it is a <strong>Mathematical Surface</strong>. In the world of machine learning, gradients are essential because they are "differentiable." This means a neural network can calculate the slope of a color transition to understand the "direction" of visual importance.
                             </p>
                             <p>
-                                In the world of web design and digital art, gradients have become an essential tool for creating modern, eye-catching interfaces. They can transform a flat, boring design into something vibrant and engaging with just a few lines of CSS code.
-                            </p>
-                            <p>
-                                Whether you're designing a website, creating a mobile app, or working on graphic design projects, understanding how to use gradients effectively can significantly enhance your creative toolkit.
+                                When we define a gradient from #FF0000 to #0000FF, we are creating a <strong>Manifold</strong> in RGB space. Professional designers use differential geometry to ensure that the rate of change (the 'derivative') of the color is constant, preventing visual jarring or "flat spots" in the transition.
                             </p>
                         </div>
                     </section>
 
-                    {/* Why Use Gradients */}
-                    <section className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-[2.5rem] p-10 border border-blue-100 space-y-6">
-                        <h2 className="text-3xl font-bold text-gray-900 flex items-center gap-3">
-                            <Zap className="text-blue-500" size={32} />
-                            Why Use Color Gradients?
-                        </h2>
-
-                        <div className="space-y-4">
-                            <FeatureItem text="Add depth and dimension to flat designs" />
-                            <FeatureItem text="Create visual hierarchy and guide user attention" />
-                            <FeatureItem text="Make designs more modern and visually appealing" />
-                            <FeatureItem text="Establish brand identity with unique color combinations" />
-                            <FeatureItem text="Enhance user experience with smooth color transitions" />
-                            <FeatureItem text="Stand out from competitors with distinctive visual style" />
+                    {/* Section 02: CRT Physics (NEW) */}
+                    <section className="bg-gray-900 p-24 rounded-[4rem] text-white overflow-hidden relative">
+                        <div className="absolute top-0 right-0 w-96 h-96 bg-pink-500/10 blur-[150px] rounded-full" />
+                        <div className="relative z-10 space-y-12">
+                            <div className="flex items-center gap-4 text-pink-400 font-black uppercase tracking-[0.2em] text-sm">
+                                <History size={20} />
+                                <span>Section 02 // Hardware Archaeology</span>
+                            </div>
+                            <h2 className="text-7xl font-black leading-none tracking-tighter">
+                                CRT Physics & <br />
+                                <span className="text-gray-500 font-mono italic">Electron Modulation</span>
+                            </h2>
+                            <div className="grid md:grid-cols-2 gap-16 items-start text-lg">
+                                <div className="space-y-6">
+                                    <p>
+                                        Before LCDs, gradients were created by physically modulating the intensity of an <strong>Electron Beam</strong>. As the beam swept across the phosphors of a Cathode Ray Tube, a rapid increase in voltage created a smooth brightening effect.
+                                    </p>
+                                    <p>
+                                        The "warmth" of vintage gradients comes from the physical decay of the phosphor itself—a natural 10-bit dithering process that modern 8-bit digital screens struggle to replicate without manual noise injection.
+                                    </p>
+                                </div>
+                                <div className="p-10 bg-black/50 rounded-3xl border border-white/5 font-mono text-xs text-pink-300">
+                                    {`[HARDWARE INTERRUPT]
+SIGNAL type: SAWTOOTH_WAVE
+FREQUENCY: 15.7 kHz
+MODULATION: Intensity(t) = V_min + (V_max - V_min) * (t / T_line)
+RESULT: Horizontal Ramp Detected.`}
+                                </div>
+                            </div>
                         </div>
                     </section>
 
-                    {/* Types of Gradients */}
-                    <section className="space-y-8">
-                        <h2 className="text-4xl font-bold text-gray-900 flex items-center gap-3">
-                            <div className="w-1.5 h-10 bg-gradient-to-b from-yellow-500 to-orange-500 rounded-full" />
-                            Types of Color Gradients
+                    {/* Section 03: Types of Gradients (Original, but improved) */}
+                    <section className="space-y-12">
+                        <div className="flex items-center gap-4 text-orange-600 font-black uppercase tracking-[0.2em] text-sm">
+                            <Layers size={20} />
+                            <span>Section 03 // Multi-Dimensional Ramping</span>
+                        </div>
+                        <h2 className="text-6xl font-black text-gray-900 leading-none">
+                            The Algebra of <br />
+                            <span className="text-gray-400 font-italic">Linear & Conic</span>
                         </h2>
-
-                        {/* Linear Gradient */}
-                        <div className="space-y-4">
-                            <h3 className="text-2xl font-bold text-gray-900">1. Linear Gradients</h3>
-                            <p className="text-gray-700 leading-relaxed text-lg">
-                                Linear gradients transition colors along a straight line. They can flow in any direction: top to bottom, left to right, or at any angle you specify.
-                            </p>
-                            <div className="grid md:grid-cols-2 gap-4">
-                                <GradientExample
-                                    gradient="linear-gradient(to right, #f093fb 0%, #f5576c 100%)"
-                                    title="Horizontal Linear"
-                                    description="Left to Right"
-                                />
-                                <GradientExample
-                                    gradient="linear-gradient(to bottom, #4facfe 0%, #00f2fe 100%)"
-                                    title="Vertical Linear"
-                                    description="Top to Bottom"
-                                />
-                                <GradientExample
-                                    gradient="linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
-                                    title="Diagonal Linear"
-                                    description="135 Degree Angle"
-                                />
-                                <GradientExample
-                                    gradient="linear-gradient(to right, #fa709a 0%, #fee140 100%)"
-                                    title="Multi-color Linear"
-                                    description="Pink to Yellow"
-                                />
+                        <div className="grid md:grid-cols-2 gap-12">
+                            <div className="space-y-6">
+                                <h4 className="text-2xl font-black text-gray-900">1. Linear Gradients</h4>
+                                <p className="text-lg text-gray-600">
+                                    Interpolating along a vector <strong>V</strong>. Linear gradients are the workhorses of the web, but they require <code>OKLCH</code> easing to avoid the "Muddy Middle" desaturation zone.
+                                </p>
+                                <div className="p-10 bg-orange-50 rounded-[3rem] border border-orange-100">
+                                    <div className="h-20 bg-gradient-to-r from-[#f093fb] to-[#f5576c] rounded-2xl shadow-inner" />
+                                </div>
+                            </div>
+                            <div className="space-y-6">
+                                <h4 className="text-2xl font-black text-gray-900">2. Conic Gradients</h4>
+                                <p className="text-lg text-gray-600">
+                                    The gradient of rotation. By mapping color to <strong>Theta (θ)</strong>, we create a surface that follows the polar coordinate system—essential for color wheels and high-end UI spinners.
+                                </p>
+                                <div className="p-10 bg-emerald-50 rounded-[3rem] border border-emerald-100">
+                                    <div className="h-20 w-20 mx-auto rounded-full bg-[conic-gradient(from_0deg,#ff6b6b,#feca57,#48dbfb,#ff6b6b)] shadow-2xl" />
+                                </div>
                             </div>
                         </div>
+                    </section>
 
-                        {/* Radial Gradient */}
-                        <div className="space-y-4">
-                            <h3 className="text-2xl font-bold text-gray-900">2. Radial Gradients</h3>
-                            <p className="text-gray-700 leading-relaxed text-lg">
-                                Radial gradients radiate outward from a central point, creating a circular or elliptical color transition. They're perfect for creating spotlight effects, buttons, and backgrounds.
-                            </p>
-                            <div className="grid md:grid-cols-2 gap-4">
-                                <GradientExample
-                                    gradient="radial-gradient(circle, #ee9ca7 0%, #ffdde1 100%)"
-                                    title="Circular Radial"
-                                    description="Center Outward"
-                                />
-                                <GradientExample
-                                    gradient="radial-gradient(ellipse at top, #a8edea 0%, #fed6e3 100%)"
-                                    title="Elliptical Radial"
-                                    description="Top Position"
-                                />
+                    {/* Section 04: Bio-photons & Mood (NEW) */}
+                    <section className="bg-pink-950 p-24 rounded-[4rem] text-white relative overflow-hidden">
+                        <div className="absolute bottom-0 right-0 w-full h-full bg-gradient-to-tl from-purple-500/20 to-transparent" />
+                        <div className="relative z-10 space-y-12">
+                            <div className="flex items-center gap-4 text-pink-400 font-black uppercase tracking-[0.2em] text-sm">
+                                <Eye size={20} />
+                                <span>Section 04 // Psychology & Bio-photons</span>
+                            </div>
+                            <h2 className="text-7xl font-black leading-none">
+                                The Biology of <br />
+                                <span className="text-pink-300 font-mono">Gradient Calm</span>
+                            </h2>
+                            <div className="prose prose-invert prose-xl max-w-4xl">
+                                <p>
+                                    Why do humans prefer gradients over flat blocks of color? It's evolutionary. In nature, "Pure" flat colors are extremely rare—usually signifying danger or artificiality.
+                                </p>
+                                <p>
+                                    The sky, the sea, and the forest are defined by <strong>Atmospheric Perspective</strong>—natural gradients. Our brains are hard-wired to perceive gradients as "Safe" and "Real." When you use a gradient in your UI, you are tapping into 4 billion years of biological light preference.
+                                </p>
+                                <div className="p-10 bg-black/40 rounded-3xl border border-pink-500/20 backdrop-blur-xl space-y-6">
+                                    <h4 className="text-xl font-bold text-pink-300 italic">"The Circadian Transformation"</h4>
+                                    <p className="text-sm text-pink-100/60 leading-relaxed font-medium">
+                                        Advanced interfaces now use <strong>Time-Dynamic Gradients</strong>—shifting from high-vibrancy blues and yellows during the day to deep, low-energy purples and oranges at night to protect the user's melatonin production.
+                                    </p>
+                                </div>
                             </div>
                         </div>
+                    </section>
 
-                        {/* Conic Gradient */}
-                        <div className="space-y-4">
-                            <h3 className="text-2xl font-bold text-gray-900">3. Conic Gradients</h3>
-                            <p className="text-gray-700 leading-relaxed text-lg">
-                                Conic gradients rotate colors around a central point, like a color wheel. They're excellent for creating pie charts, loading spinners, and unique design elements.
+                    {/* Section 05: Sub-surface Scattering (NEW) */}
+                    <section className="space-y-16">
+                        <div className="flex items-center gap-4 text-indigo-600 font-black uppercase tracking-[0.2em] text-sm">
+                            <Zap size={20} />
+                            <span>Section 05 // Surface Physics</span>
+                        </div>
+                        <h2 className="text-6xl font-black text-gray-900 leading-none">
+                            Sub-surface <br />
+                            <span className="text-gray-400 font-italic">Scattering (SSS)</span>
+                        </h2>
+                        <div className="text-xl text-gray-700 leading-relaxed space-y-12">
+                            <p>
+                                To make a UI element feel "Premium," like wax, skin, or high-end plastic, you must simulate how light penetrates the surface and bounces back. This is achieved through <strong>Inner Radial Gradients</strong>.
                             </p>
-                            <div className="grid md:grid-cols-2 gap-4">
-                                <GradientExample
-                                    gradient="conic-gradient(from 0deg, #ff6b6b, #feca57, #48dbfb, #ff6b6b)"
-                                    title="Rainbow Conic"
-                                    description="Full Color Wheel"
-                                />
-                                <GradientExample
-                                    gradient="conic-gradient(from 45deg, #667eea 0%, #764ba2 50%, #667eea 100%)"
-                                    title="Two-tone Conic"
-                                    description="Purple Rotation"
-                                />
+                            <div className="bg-white border border-gray-100 p-16 rounded-[4rem] shadow-sm space-y-10 group transition-all hover:border-indigo-200">
+                                <div className="grid md:grid-cols-2 gap-16">
+                                    <div className="space-y-6">
+                                        <h4 className="text-3xl font-black text-gray-900 italic">The "Apple Diffusion"</h4>
+                                        <p className="text-lg text-gray-500">By stacking three 10% opacity white-to-transparent radial gradients at the top edge of a button, you simulate the internal light scattering found in premium glassmorphism.</p>
+                                        <div className="flex gap-4">
+                                            <div className="w-16 h-16 rounded-2xl bg-indigo-500 shadow-[inset_0_0_20px_rgba(255,255,255,0.4)]" />
+                                            <div className="w-16 h-16 rounded-2xl bg-teal-500 shadow-[inset_0_0_20px_rgba(255,255,255,0.4)]" />
+                                        </div>
+                                    </div>
+                                    <div className="relative p-10 bg-gray-50 rounded-3xl text-center">
+                                        <p className="text-[10px] font-black uppercase text-gray-400 mb-4">SSS Simulation Active</p>
+                                        <div className="w-full h-40 bg-white rounded-2xl shadow-inner relative overflow-hidden">
+                                            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-transparent" />
+                                            <div className="absolute top-0 left-0 w-full h-full bg-radial-gradient(at top left, white, transparent 70%) opacity-30" />
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -410,6 +447,38 @@ background: conic-gradient(from 0deg, #ff6b6b, #feca57, #48dbfb);`}
                         </div>
                     </section>
 
+                    {/* Final Footer */}
+                    <footer className="bg-gradient-to-br from-pink-950 to-black rounded-[5rem] p-32 text-center space-y-12 relative overflow-hidden shadow-2xl">
+                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10" />
+                        <motion.div
+                            initial={{ rotate: -180, scale: 0 }}
+                            whileInView={{ rotate: 0, scale: 1 }}
+                            transition={{ duration: 1.5, type: "spring" }}
+                        >
+                            <Palette className="mx-auto text-pink-400" size={100} />
+                        </motion.div>
+                        <h3 className="text-7xl font-black text-white relative z-10 leading-none tracking-tighter">
+                            Architect Your <br />
+                            Color Legacy.
+                        </h3>
+                        <p className="text-2xl text-pink-200/50 max-w-3xl mx-auto relative z-10 font-bold leading-relaxed">
+                            Stop using "good enough" transitions. Start building the future of digital light with the world's most comprehensive architectural resource.
+                        </p>
+                        <div className="flex flex-col md:flex-row gap-10 justify-center relative z-10 pt-12">
+                            <Link
+                                href="/tools/gradient-generator"
+                                className="px-16 py-8 bg-white text-pink-950 rounded-[3rem] text-2xl font-black transition-all transform hover:scale-110 hover:shadow-[0_0_80px_rgba(255,255,255,0.3)] shadow-2xl"
+                            >
+                                Open Playground [v4.0]
+                            </Link>
+                            <Link
+                                href="/blog"
+                                className="px-16 py-8 bg-pink-600 text-white rounded-[3rem] text-2xl font-black transition-all transform hover:scale-110 shadow-2xl hover:bg-pink-500"
+                            >
+                                Explorer Theory
+                            </Link>
+                        </div>
+                    </footer>
                 </article>
             </div>
         </>

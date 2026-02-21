@@ -3,60 +3,7 @@ import { BookOpen, Calendar, Clock, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import SEO from '@/components/SEO';
 import SchemaOrg from '@/components/SchemaOrg';
-
-// Blog articles data
-const BLOG_ARTICLES = [
-    {
-        slug: 'what-is-color-gradient',
-        title: 'What Is a Color Gradient? A Beginner\'s Guide',
-        excerpt: 'Learn everything about color gradients in this comprehensive beginner\'s guide. Discover types of gradients, how to create them, and best practices for web design.',
-        date: 'February 14, 2026',
-        readTime: '8 min read',
-        category: 'Tutorial',
-        gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-        image: null
-    },
-    {
-        slug: 'understanding-rgb-hex-hsl-color-codes',
-        title: 'Understanding RGB, HEX, and HSL Color Codes',
-        excerpt: 'Master the three most popular color code systems used in web design. Learn how RGB, HEX, and HSL work, when to use each, and how to convert between formats.',
-        date: 'February 14, 2026',
-        readTime: '12 min read',
-        category: 'Technical Guide',
-        gradient: 'linear-gradient(135deg, #667eea 0%, #06b6d4 100%)',
-        image: null
-    },
-    {
-        slug: 'psychology-of-colors-in-design',
-        title: 'The Psychology of Colors in Design',
-        excerpt: 'Discover how colors influence emotions, behavior, and decision-making. Learn the psychological meanings of colors and how to use them effectively in your designs.',
-        date: 'February 14, 2026',
-        readTime: '15 min read',
-        category: 'Psychology',
-        gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)',
-        image: null
-    },
-    {
-        slug: 'choose-color-palette-for-website',
-        title: 'How to Choose the Right Color Palette for Your Website',
-        excerpt: 'Learn how to create perfect color palettes for your website. Discover color theory, practical strategies, and proven techniques for choosing harmonious color combinations.',
-        date: 'February 14, 2026',
-        readTime: '14 min read',
-        category: 'Design Guide',
-        gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
-        image: null
-    },
-    {
-        slug: 'warm-vs-cool-colors-when-to-use-each',
-        title: 'Warm vs Cool Colors: When to Use Each',
-        excerpt: 'Master the difference between warm and cool colors. Learn when to use each type, how they affect emotions, and practical strategies for combining them in your designs.',
-        date: 'February 14, 2026',
-        readTime: '13 min read',
-        category: 'Color Theory',
-        gradient: 'linear-gradient(135deg, #f5576c 0%, #667eea 100%)',
-        image: null
-    }
-];
+import { BLOG_ARTICLES } from '@/lib/blog_data';
 
 export default function BlogIndex() {
     return (

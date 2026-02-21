@@ -1,87 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-    <url>
-      <loc>https://colorverse.online</loc>
-      <priority>0.9</priority>
-    </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://colorverse.online/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://colorverse.online/about</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://colorverse.online/contact</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://colorverse.online/privacy-policy</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://colorverse.online/disclaimer</loc>
+    <priority>0.3</priority>
+  </url>
 
-    <url>
-      <loc>https://colorverse.online/gradient-generator</loc>
-      <priority>0.8</priority>
-    </url>
+  <url>
+    <loc>https://colorverse.online/gradient-generator</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://colorverse.online/gradient-backgrounds</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://colorverse.online/color-shades</loc>
+    <priority>0.9</priority>
+  </url>
+  <url><loc>https://colorverse.online/shades-of-blue</loc><priority>0.8</priority></url>
+  <url><loc>https://colorverse.online/shades-of-red</loc><priority>0.8</priority></url>
+  <url><loc>https://colorverse.online/shades-of-green</loc><priority>0.8</priority></url>
+  <url><loc>https://colorverse.online/shades-of-yellow</loc><priority>0.8</priority></url>
+  <url><loc>https://colorverse.online/shades-of-purple</loc><priority>0.8</priority></url>
+  <url><loc>https://colorverse.online/shades-of-pink</loc><priority>0.8</priority></url>
+  <url><loc>https://colorverse.online/shades-of-indigo</loc><priority>0.8</priority></url>
+  <url><loc>https://colorverse.online/shades-of-teal</loc><priority>0.8</priority></url>
+  <url><loc>https://colorverse.online/shades-of-orange</loc><priority>0.8</priority></url>
 
-    <url>
-      <loc>https://colorverse.online/gradient-backgrounds</loc>
-      <priority>0.8</priority>
-    </url>
-
-
-   <url>
-      <loc>https://colorverse.online/color-shades</loc>
-      <priority>0.8</priority>
-    </url>
-
-
-    <url>
-      <loc>https://colorverse.online/shades-of-blue</loc>
-      <priority>0.8</priority>
-    </url>
-
-
-
-    <url>
-      <loc>https://colorverse.online/shades-of-green</loc>
-      <priority>0.8</priority>
-    </url>
-
-    <url>
-      <loc>https://colorverse.online/shades-of-blue</loc>
-      <priority>0.8</priority>
-    </url>
-
-
-    <url>
-      <loc>https://colorverse.online/shades-of-red</loc>
-      <priority>0.8</priority>
-    </url>
-
-    <url>
-      <loc>https://colorverse.online/shades-of-yellow</loc>
-      <priority>0.8</priority>
-    </url>
-
-
-    <url>
-      <loc>https://colorverse.online/shades-of-purple</loc>
-      <priority>0.8</priority>
-    </url>
-
-
-
-        <url>
-      <loc>https://colorverse.online/shades-of-pink</loc>
-      <priority>0.8</priority>
-    </url>
-
-
-    <url>
-      <loc>https://colorverse.online/shades-of-indigo</loc>
-      <priority>0.8</priority>
-    </url>
-
-
-        <url>
-      <loc>https://colorverse.online/shades-of-teal</loc>
-      <priority>0.8</priority>
-    </url>
-
-
-    <url>
-      <loc>https://colorverse.online/shades-of-orange</loc>
-      <priority>0.8</priority>
-    </url>
-
-
-
-    </urlset>
+  <url>
+    <loc>https://colorverse.online/blog/how-to-generate-css-gradient-code-easily</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://colorverse.online/blog/beginners-guide-to-hex-color-codes</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://colorverse.online/blog/how-to-convert-hex-to-rgb-and-hsl</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://colorverse.online/blog/creating-responsive-gradient-backgrounds</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://colorverse.online/blog/using-gradients-in-tailwind-css</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://colorverse.online/blog/how-to-create-smooth-color-transitions</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://colorverse.online/blog/what-is-gradient-in-graphic-design</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://colorverse.online/blog/how-contrast-affects-readability-web-design</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://colorverse.online/blog/monochromatic-vs-complementary-color-schemes</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://colorverse.online/blog/what-is-color-harmony</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://colorverse.online/blog/warm-vs-cool-colors-when-to-use-each</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://colorverse.online/blog/choose-color-palette-for-website</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://colorverse.online/blog/psychology-of-colors-in-design</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://colorverse.online/blog/understanding-rgb-hex-hsl-color-codes</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://colorverse.online/blog/what-is-color-gradient</loc>
+    <priority>0.7</priority>
+  </url>
+</urlset>

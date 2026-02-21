@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Palette, Layers, ArrowRight, Zap, Sparkles, Github, Linkedin, ExternalLink } from 'lucide-react';
+import { Palette, Layers, ArrowRight, Zap, Sparkles, Github, Linkedin, ExternalLink, BookOpen, Calendar, Clock } from 'lucide-react';
 import SEO from '@/components/SEO';
 import SchemaOrg from '@/components/SchemaOrg';
+import { BLOG_ARTICLES } from '@/lib/blog_data';
 
 export default function Home() {
   return (
@@ -161,6 +162,34 @@ export default function Home() {
           />
         </section>
 
+        {/* Blog Section */}
+        <section className="max-w-6xl mx-auto py-12 space-y-12">
+          <div className="flex items-center justify-between px-4">
+            <div className="space-y-1">
+              <h2 className="text-3xl font-bold text-gray-900 flex items-center gap-3">
+                <BookOpen className="text-pink-500" size={28} />
+                Latest Articles
+              </h2>
+              <p className="text-gray-600">Explore our latest tips and guides on design and CSS.</p>
+            </div>
+            <Link href="/blog" className="hidden md:flex items-center gap-2 text-sm font-bold text-purple-600 hover:gap-4 transition-all">
+              View All Articles <ArrowRight size={18} />
+            </Link>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+            {BLOG_ARTICLES.slice(0, 6).map((article, index) => (
+              <ArticleCard key={article.slug} article={article} index={index} />
+            ))}
+          </div>
+
+          <div className="text-center md:hidden px-4">
+            <Link href="/blog" className="inline-flex items-center gap-2 px-8 py-4 bg-gray-50 text-gray-900 border border-gray-200 rounded-full font-bold shadow-sm hover:bg-gray-100 transition-all">
+              View All Articles <ArrowRight size={18} />
+            </Link>
+          </div>
+        </section>
+
         {/* Author Section */}
         <section className="max-w-4xl mx-auto py-12">
           <motion.div
@@ -242,5 +271,58 @@ function SocialLink({ href, icon, label }) {
       <span>{label}</span>
       <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
     </a>
+  );
+}
+
+function ArticleCard({ article, index }) {
+  return (
+    <Link href={`/blog/${article.slug}`} className="group block h-full">
+      <motion.article
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: index * 0.1 }}
+        className="h-full bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group-hover:-translate-y-2"
+      >
+        {/* Gradient Header */}
+        <div
+          className="h-40 relative overflow-hidden"
+          style={{ background: article.gradient }}
+        >
+          <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors" />
+          <div className="absolute top-4 left-4">
+            <span className="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-gray-900">
+              {article.category}
+            </span>
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="p-6 space-y-4">
+          <h3 className="text-xl font-bold text-gray-900 leading-tight group-hover:text-purple-600 transition-colors">
+            {article.title}
+          </h3>
+
+          <p className="text-gray-600 text-sm leading-relaxed line-clamp-2">
+            {article.excerpt}
+          </p>
+
+          <div className="flex items-center gap-4 text-xs text-gray-500 pt-4 border-t border-gray-100">
+            <div className="flex items-center gap-1">
+              <Calendar size={12} />
+              <span>{article.date}</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <Clock size={12} />
+              <span>{article.readTime}</span>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2 text-sm font-bold text-purple-600 group-hover:gap-4 transition-all pt-2">
+            Read Article <ArrowRight size={16} />
+          </div>
+        </div>
+      </motion.article>
+    </Link>
   );
 }
