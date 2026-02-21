@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowLeft, Box, Binary, Zap, History, Lightbulb, Monitor, ShieldCheck, ChevronRight, Info, Terminal, Cpu, Palette, Eye, ShieldAlert, Wifi, ZapOff, Sparkles } from 'lucide-react';
+import { ArrowLeft, Box, Binary, Zap, History, Lightbulb, Monitor, ShieldCheck, ChevronRight, Info, Terminal, Cpu, Palette, Eye, ShieldAlert, Wifi, ZapOff, Sparkles, Activity } from 'lucide-react';
 import Link from 'next/link';
 import SEO from '@/components/SEO';
 import SchemaOrg from '@/components/SchemaOrg';
@@ -261,7 +261,7 @@ export default function QuantumHexGuide() {
                     {/* Section 06: Security & Fingerprinting (Original, but improved) */}
                     <section className="bg-red-950 p-20 rounded-[4rem] text-white relative">
                         <div className="absolute top-0 right-0 p-8">
-                            <ShieldAlert className="text-red-500/30" size={120} skew-y-12 />
+                            <ShieldAlert className="text-red-500/30 skew-y-12" size={120} />
                         </div>
                         <div className="relative z-10 space-y-10">
                             <div className="inline-flex gap-3 items-center px-4 py-1 rounded-full bg-red-500/20 border border-red-500/30 text-[10px] font-black uppercase tracking-widest">Privacy Warning</div>

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowLeft, Sparkles, Code, Layout, Layers, Palette, Zap, History, Globe, ShieldCheck, ChevronRight, Info, Terminal, MousePointer2, Wand2, Activity, Cpu, Gauge, Tablet } from 'lucide-react';
+import { ArrowLeft, Sparkles, Code, Layout, Layers, Palette, Zap, History, Globe, ShieldCheck, ChevronRight, Info, Terminal, MousePointer2, Wand2, Activity, Cpu, Gauge, Tablet, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 import SEO from '@/components/SEO';
 import SchemaOrg from '@/components/SchemaOrg';

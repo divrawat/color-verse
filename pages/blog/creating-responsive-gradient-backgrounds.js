@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowLeft, Smartphone, Zap, Monitor, Code, Layers, Layout, ShieldCheck, ChevronRight, Info, Terminal, Cpu, SmartphoneIcon as Mobile, MousePointer2, Activity, Battery, Box, Layers as LayersIcon, PanelTop, Scaling, Sparkles } from 'lucide-react';
+import { ArrowLeft, Smartphone, Zap, Monitor, Code, Layers as LayersIcon, Layout, ShieldCheck, ChevronRight, Info, Terminal, Cpu, SmartphoneIcon as Mobile, MousePointer2, Activity, Battery, Box, PanelTop, Scaling, Sparkles, CheckCircle, Target } from 'lucide-react';
 import Link from 'next/link';
 import SEO from '@/components/SEO';
 import SchemaOrg from '@/components/SchemaOrg';

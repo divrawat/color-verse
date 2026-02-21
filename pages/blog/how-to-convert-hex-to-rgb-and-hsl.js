@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowLeft, RefreshCw, Zap, Calculator, Code, Layers, Palette, ShieldCheck, ChevronRight, Info, Terminal, Settings, Database, Activity, Box, Cpu, Gauge, ShieldAlert, Sparkles, Binary } from 'lucide-react';
+import { ArrowLeft, RefreshCw, Zap, Calculator, Code, Layers, Palette, ShieldCheck, ChevronRight, Info, Terminal, Settings, Database, Activity, Box, Cpu, Gauge, ShieldAlert, Sparkles, Binary, Eye, History } from 'lucide-react';
 import Link from 'next/link';
 import SEO from '@/components/SEO';
 import SchemaOrg from '@/components/SchemaOrg';
